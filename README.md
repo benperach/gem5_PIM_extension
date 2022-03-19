@@ -20,3 +20,6 @@ There are some halping functions in src/mem/pim_lib.hh that can help in building
 
 Changing addressing parameters: 
 In the file src/mem/pim_lib.hh there is the addressing scheme of the PIM modules (address bit that indicate row, column, crossbar, subarry, bank, channel). This scheme can be changed manually by changing the parameters in this file. The addressing determind which address go to which location in the PIM module.
+
+Adding PIM instructions:
+This is done by assigning the relevent opcode and latency in the src/mem/pim_lib.hh file. To perform the actual PIM operation on the simulated memory, the accessPIM function in src/mem/pim_ctrl.cc file has to be adjusted.
