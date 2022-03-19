@@ -9,6 +9,7 @@ The extention is on gem5 19.
 
 Assigning pages for PIM:
 The PIM operations are designed to work on a 2MB pages. In order to assign 2MB page to the PIM module you must first allocate a 2MB page and then issue a PIM instruction with opcode 0x1f to an address in that page. The PIM instruction with that opcode is recognized by the DRAM controller and mark the page address range as to be assign to the PIM module. Note that any data writen to the page before issuing the PIM instruction will be lost.
+To assign 2MB pages in linux, first you must ask linux to allocate enough 2MB huge pages and then in the application code asked (using mmap) for 2MB pages. The hack_back_ckpt.rcS in this project ask linux, after boot and before checkpointing, to assign 1024 2MB pages (the rest of the file is as supplied by the gem5 project). This is an example that can be modified as needed. 
 
 PIM instructions:
 For X86, the PIM instruction in inline assmbler is included in the piminst_X86.h file. For ARM, the PIM instruction in inline assmbler is included in the piminst_arm.h file. To use the PIM instruction in a program code, include the relevant file and use the pimInst function from the file.
