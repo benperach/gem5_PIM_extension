@@ -1,0 +1,7 @@
+protocol "MESI_Two_Level_pim";
+include "RubySlicc_interfaces.slicc";
+include "MESI_Two_Level_pim-msg.sm";
+include "MESI_Two_Level_pim-L1cache.sm";
+include "MESI_Two_Level_pim-L2cache.sm";
+include "MESI_Two_Level_pim-dir.sm";
+include "MESI_Two_Level_pim-dma.sm";

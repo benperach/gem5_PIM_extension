@@ -1,0 +1,6 @@
+protocol "MOESI_hammer_pim";
+include "RubySlicc_interfaces.slicc";
+include "MOESI_hammer_pim-msg.sm";
+include "MOESI_hammer_pim-cache.sm";
+include "MOESI_hammer_pim-dir.sm";
+include "MOESI_hammer_pim-dma.sm";
