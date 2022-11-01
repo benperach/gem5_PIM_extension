@@ -1,7 +1,7 @@
 # gem5_PIM_extension
 A gem5 extension, introducing a bulk-bitwise PIM module. This extension implement bulk-bitwise PIM modulw with a programming model and additional X86/ARM instruction to interact with the PIM module.  
 
-This extention was developed during the work on: 
+This extention was developed during the work on: https://arxiv.org/abs/2203.10486 
 See the paper for more details about the extention.
 Plese cite the above paper when using this extention.
 
